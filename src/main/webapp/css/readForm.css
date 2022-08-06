@@ -9,14 +9,31 @@ p{
 	
 }
 
+.allContainer{
+	height: 100%;
+	display: flex;
+}
+
 .container{
+	display:flex;
 	margin-top: 20px;
     padding: 10px;
+    width: 150%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.replyContainer{
+	display:flex;
+	float: right;
+	background: #9be6af;
+	height: auto;
+	width: 100%;
 }
 
 @media(min-width: 761px){
 	.container{
-		width : 50%;	
+		width : 170%;	
 	}
 	#btn_form_sex{
 		font-size :2rem !important;

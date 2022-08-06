@@ -58,7 +58,7 @@ content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	</section>
 
 	<div class="album py-2 bg-light">
-		<div class="container">
+		<div class="container" >
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 				<c:forEach var="articleList" items="${ARTICLE_ID}" varStatus="status">
 					<div class="col">
