@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
+body{
+/* 	background: red; */
+}
+
+p{
+	display: inline;
+	
+}
+
+.container{
+	margin-top: 20px;
+    padding: 10px;
+}
+
+@media(min-width: 761px){
+	.container{
+		width : 50%;	
+	}
+	#btn_form_sex{
+		font-size :2rem !important;
+	}
+}
+
+@media(max-width: 760px){
+	.container{
+		margin-top:30%;
+	}
+	#btn_form_sex{
+		font-size :1.4rem !important;
+	}
+}
+
+
+
+#content_box{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	padding : 25px;
+}
+
+.title_box{
+	
+/* 	background: blue; */
+	font-size: 30px;
+	color: #595959;
+	margin-top: 20px;	
+}
+
+.video_box{
+/* 	background: green; */
+}
+
+.video_box{
+	position:relative; 
+	padding-bottom:56.25%; 
+	padding-top:30px; 
+	height:0; 
+/* 	overflow:hidden; */
+}
+
+.video_box iframe,
+.video_box object,
+.video_box embed{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+
+iframe{
+	position: absolute;
+/* 	margin-top: 12%; */
+}
+
+
+.comment_box{
+	background:#e4e4e4;
+}
+
+#btn_from_sex{
+	margin:0 10px 0 10px !important;
+	width : 30%;
+}
+
+.form_btn{
+/* 	background:magenta; */
+	margin-top: 10px;
+}
