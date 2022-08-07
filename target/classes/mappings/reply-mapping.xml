@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ReplyDAO">
+	
+	<!-- 각 컬럼벌 매핑 -->
+	<resultMap id="replyResult" type="com.spring.crud.ReplyVO">
+		<!-- 댓글의 id -->
+		<result property="replyid" column="article_replyid"/>
+		<!-- 대댓글 id -->
+		<result property="re_replyid" column="article_re_replyid"/>
+		<!-- 게시글 id -->
+		<result property="id" column="article_id"/>
+		<!-- 댓글 비밀번호 -->
+		<result property="pw" column="replypw"/>
+		<!-- 댓글 내용 -->
+		<result property="reply" column="reply"/>
+		<!-- 댓글 작성자 -->
+		<result property="replyer" column="replyer"/>
+	</resultMap>
+
+	<!-- parameterType : 받는 자료형을 고정하는 뭐 그런 거시기 -->
+	<select id="getList" resultMap="replyResult" parameterType="int">
+		select * from tbl_reply where article_id = ${article_id} order by article_replyid desc;
+	</select>
+
+</mapper>

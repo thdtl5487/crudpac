@@ -9,10 +9,10 @@ p{
 	
 }
 
-.allContainer{
-	height: 100%;
-	display: flex;
+ul{
+	list-style: none;
 }
+
 
 .container{
 	display:flex;
@@ -32,6 +32,10 @@ p{
 }
 
 @media(min-width: 761px){
+	.allContainer{
+	height: 100%;
+	display: flex;
+}
 	.container{
 		width : 170%;	
 	}
@@ -42,7 +46,8 @@ p{
 
 @media(max-width: 760px){
 	.container{
-		margin-top:30%;
+/* 		margin-top:30%; */
+		justify-content: center;
 	}
 	#btn_form_sex{
 		font-size :1.4rem !important;
@@ -105,3 +110,43 @@ iframe{
 /* 	background:magenta; */
 	margin-top: 10px;
 }
+
+/* @@@@@@@@@@@@@ reply area start @@@@@@@@@ */
+
+.replyInsert{
+	margin-left: 10px;
+}
+
+.Input-reply{
+	background: blue;
+	padding : 5px;
+}
+
+.Input-reply-content{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.replyList{
+	width:100%;
+	margin: 10px 10px 10px 0;
+}
+
+.replyrenderer{
+	background: red;
+	width:100%;
+	margin-top: 5px;
+}
+
+.replyArea{
+	padding-left: 10px;
+}
+
+.replyrenderer button{
+	float:right;
+	vertical-align: middle;
+}
+
+
+
+

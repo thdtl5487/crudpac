@@ -2,41 +2,42 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+
 <mapper namespace="ArticleDAO">
 
 	<!-- ResultMap 등록 -->
 	<resultMap id="articleResult" type="article">
 		<!-- id 프로퍼티 추가 -->
 		<result property="id" column="article_id" />
-		
-		<result property="title" column="article_title"/>
-		<result property="video" column="video_url"/>
-		<result property="content" column="article_content"/>
+
+		<result property="title" column="article_title" />
+		<result property="video" column="video_url" />
+		<result property="content" column="article_content" />
 	</resultMap>
-	
+
 	<!-- <![CDATA[]]> : 블록 안의 코드를 문자열로 처리해줌 -->
 	<select id="selectById" resultMap="articleResult">
 	<![CDATA[
 		SELECT * FROM SPRING_CRUD WHERE ARTICLE_ID = (SELECT MAX(ARTICLE_ID) FROM SPRING_CRUD)
 		]]>
 	</select>
-	
+
 	<!-- 10개의 게시글 가져오기 -->
 	<select id="getList" resultMap="articleResult">
 	<![CDATA[
 		SELECT * FROM SPRING_CRUD ORDER BY ARTICLE_ID DESC
 		]]>
 	</select>
-	
-	
+
+
 	<select id="selectFromList" resultMap="articleResult">
 	<![CDATA[
 		SELECT * FROM SPRING_CRUD WHERE ARTICLE_ID = #{id}
 		]]>
 	</select>
-	
-	
-	
+
+
+
 	<insert id="insert">
 	<![CDATA[
 		INSERT INTO SPRING_CRUD(ARTICLE_ID, ARTICLE_TITLE, video_url , ARTICLE_CONTENT)
@@ -50,20 +51,18 @@
 		WHERE ARTICLE_ID = (SELECT MAX(ARTICLE_ID) FROM SPRING_CRUD)
 		]]>
 	</update>
-	
+
 
 	<delete id="delete">
 	<![CDATA[
 		DELETE FROM SPRING_CRUD WHERE ARTICLE_ID = #{id}
 		]]>
 	</delete>
-	
+
 	<update id="updateFromListActive">
 	<![CDATA[
 		UPDATE SPRING_CRUD SET ARTICLE_TITLE = #{title}, ARTICLE_CONTENT = #{content}, VIDEO_URL = #{video} 
 		WHERE ARTICLE_ID = #{id}
 		]]>
 	</update>
-	
-
 </mapper>

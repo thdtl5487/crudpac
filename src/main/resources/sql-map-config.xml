@@ -8,11 +8,17 @@
 	<typeAliases>
 		<typeAlias type="com.spring.crud.ArticleVO" alias="article"></typeAlias>
 	</typeAliases>
-
+	
 	<!-- SQL Mapper 설정 -->
 	<mappers>
 		<mapper resource="mappings/article-mapping.xml" />
+		
+	<!-- 댓글 SQL Mapper 설정 -->
+		<mapper resource="mappings/reply-mapping.xml" />
 	</mappers>
+	
+
+	
 </configuration>
 
 

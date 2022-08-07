@@ -84,7 +84,56 @@
 		<!-- end container -->
 
 		<!-- start reply container -->
-		<div class="replyContainer" style="float: right"></div>
+		<div class="replyContainer" style="float: right">
+			
+			<div class="replyList">
+				<div class="replyInsert">
+					<form action="#">
+						<div class="Input-reply">
+							<input class="Input-reply-replyer" type="text" placeholder="닉네임" value="">
+							<input class="Input-reply-pw" type="text" placeholder="비밀번호" value="">
+							<input class="Input-reply-content" type="text" placeholder="내용" value="">
+							<input type="button" value="댓글달기">
+						</div>
+					</form>
+				</div>
+			
+				<ul class="replyArea">
+					<!-- 각각의 코멘트 영역 시작 -->
+					<li class="replyrenderer">
+						<div class="replyer">
+							<b>백팔연타 나기동</b>
+						</div>
+						<div class="replyContent">
+							걍뒤지셈
+						</div>
+						<div class="replyButton">
+							2022-08-07
+							<button>답글 달기</button>
+							<button>삭제</button>
+						</div>
+					</li>
+					<!-- 각각의 코멘트 영역 시작 -->
+					
+					<!-- 복수코멘트 테스트용 영역 시작 -->
+					<li class="replyrenderer">
+						<div class="replyer">
+							<b>백팔연타 나기동</b>
+						</div>
+						<div class="replyContent">
+							걍뒤지셈
+						</div>
+						<div class="replyButton">
+							2022-08-07
+							<button>답글 달기</button>
+							<button>삭제</button>
+						</div>
+					</li>
+					<!-- 각각의 코멘트 영역 시작 -->
+				</ul>
+			</div>
+		
+		</div>
 		<!-- end reply container -->
 	</div>
 

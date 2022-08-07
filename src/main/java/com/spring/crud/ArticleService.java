@@ -4,13 +4,13 @@ import java.util.List;
 
 public interface ArticleService {
 
-	ArticleVO selectById(ArticleVO vo);
+	ArticleVO selectById(ArticleVO vo); // 현재 사용안함
 	
-	void insert(ArticleVO vo);
+	void insert(ArticleVO vo); // 현재 사용안함
 	
-	void update(ArticleVO vo);
+	void update(ArticleVO vo); // 현재 사용안함
 	
-	void delete(ArticleVO vo);
+	void delete(ArticleVO vo); // 현재 사용안함
 	
 	List<ArticleVO> getList();
 	
